@@ -53,6 +53,7 @@ a {
 
 body {
   font-family: Montserrat;
+  line-height: normal;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -94,21 +95,66 @@ clip: rect(0 0 0 0);
   padding-left: 8px;
   padding-right: 8px;
   min-width: 320px;
-  /* max-width: 1440px; */
+  max-width: 1440px;
 }
 
 /*  ====================== header ========================== */
+/*  ====================== burger-menu ========================== */
+
+label {
+  display: block;
+  height: 30px;
+  position: relative;
+  top: 15px
+}
+
+label span,
+label span::before,
+label span::after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: #333;
+  position: absolute;
+  right: 0;
+  transition: .3s;
+}
+
+label span::before {
+  top: -8px;
+}
+
+label span::after {
+  top: 8px;
+}
+
+/* .nav_menu {
+  display: none;
+} */
+
 .header {
   /* height: 540px; */
+  max-width: 1600px;
+  width: 100vw;
+  margin: 0 auto;
   background-image: url(img/desk-header.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin-bottom: 63px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 175px;
 }
 
 .header_menu {
   margin-top: 19px;
-  margin-bottom: 112px;
+  /* margin-bottom: 112px; */
   text-align: center;
 }
 
@@ -126,6 +172,12 @@ clip: rect(0 0 0 0);
 .menu_text:focus {
   background: rgba(26, 25, 21, 0.0001);
   border: 2px solid #fff;
+}
+
+.burger-menu {
+  /* display: inline-block; */
+  margin: 0 auto;
+  /* text-align: center; */
 }
 
 .logo {
@@ -148,7 +200,7 @@ clip: rect(0 0 0 0);
 }
 
 .title {
-
+  line-height: normal;
   font-size: 30px;
   display: inline-block;
   margin-bottom: 12px;
@@ -182,8 +234,163 @@ clip: rect(0 0 0 0);
 
 
 /* ====================== main ========================== */
+
+.text {
+  width: 290px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.partner-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.partner-item {
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  /* height: 210px; */
+}
+
+.partner-item>p {
+  color: #666;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.partner-item:nth-child(1) .bg-svg {
+  background-color: #FF4E50;
+}
+
+.partner-item:nth-child(2) .bg-svg {
+  background-color: #FFA507;
+
+}
+
+.partner-item:nth-child(3) .bg-svg {
+  background-color: #1CD7AD;
+}
+
+.partner-item:nth-child(4) .bg-svg {
+  background-color: #4E73DB;
+}
+
+.partner-item-img {
+  position: relative;
+  width: 125px;
+  height: 125px;
+  margin: 0 auto;
+  margin-bottom: 13px;
+}
+
+.bg-svg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 7px 8px 8px 8px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+}
+
+.name-text {
+  color: #333;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 13px;
+}
+
+.other_button {
+  background-color: transparent;
+  border: 2px solid #FF4E50;
+  min-height: 43px;
+  min-width: 228px;
+  border-radius: 30px;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FF4E50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 37px;
+  margin-bottom: 72px;
+}
+
 /* ====================== footer ==========================  */
 
 @media screen and (min-width: 768px) {
-  .header {}
+  .container {
+    width: 570px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+  .title {
+    font-size: 52px;
+    width: 507px;
+  }
+
+  .little_title {
+    font-size: 24px;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: baseline;
+    /* width: 768px; */
+    margin: 0 auto;
+  }
+
+  .text {
+    width: 440px;
+  }
+
+  .partner-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 55px;
+  }
+
+  .partner-item {
+    flex-basis: calc((100% - 53px * 2) / 2);
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 920px;
+  }
+
+  .partner-list {
+    flex-wrap: nowrap;
+    gap: 35px;
+  }
+
+  .partner-item {
+    /* flex-basis: calc((100% - 35px * 3) / 4); */
+  }
 }

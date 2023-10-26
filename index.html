@@ -15,68 +15,90 @@
 <body>
   <header class="header">
     <div class="container">
-      <!-- <nav class="menu"> -->
-      <div class="header_menu">
-        <a class="menu_text" href="#">Log in</a>
-        <a class="menu_text" href="#">Sing up</a>
+      <div class="menu">
+        <div class="header_menu">
+          <a class="menu_text" href="#">Log in</a>
+          <a class="menu_text" href="#">Sing up</a>
+        </div>
+        <input type="checkbox" id="toggle">
+        <label for="toggle">
+          <span class="toggle-btn">menu</span>
+        </label>
+        <button type="button" class="burger-menu">menu
+          <!-- <svg>
+            <use href=""></use>
+          </svg> -->
+        </button>
+        <a href="#" class="logo">URLAUBSGLÜCK</a>
       </div>
-      <a href="#" class="logo">URLAUBSGLÜCK</a>
-      <!-- </nav> -->
       <div class="header_title">
         <h1 class="title">Share your holiday dreams</h1>
         <p class="little_title">And find the perfect partner to fullfill it</p>
         <button class="button" type="button">Find your holiday partner</button>
-
       </div>
     </div>
   </header>
-</body>
-
-</html>
-
-
-<body>
-  <header>
-    <a href="/" class="logo">WebStudio</a>
-    <nav class="">
-      <ul>
-        <li><a href="#">вебстудія</a></li>
-        <li><a href="#">попрфоліо</a></li>
-        <li><a href="#">контакти</a></li>
-      </ul>
-    </nav>
-    <ul>
-      <li><a href="tel:+38012345697">+38012345697</a></li>
-      <li><a href="mailto:qwert@mail.com">qwert@mail.com</a></li>
-    </ul>
-  </header>
   <main>
-    <section>
-      <h1>WAESRDTFGYUHIJ</h1>
-      <button type="button">qwerty</button>
-    </section>
-    <section>
-      <h2></h2>
-      <ul>
-        <li>
-          <img src="" alt="">
-          <h3></h3>
-          <p></p>
+    <section class="partner container">
+      <!-- <div class="partner-title"> -->
+      <h2 class="text">Meet a partner for your best holiday</h2>
+      <!-- </div> -->
+      <ul class="partner-list">
+        <li class="partner-item">
+          <div class="partner-item-img">
+            <img src="img/man_mustache.png" alt="man in glasses" width="120" height="120">
+            <div class="bg-svg">
+              <svg class="partner-item-svg" width="20" height="20">
+                <use href="img/sprite.svg#icon-shape-1"></use>
+              </svg>
+            </div>
+          </div>
+          <h3 class="name-text">Bradley Hunter</h3>
+          <p>Based in Chicago. I love playing tennis and loud music.</p>
         </li>
-        <li>
-          <h3></h3>
-          <p></p>
+        <li class="partner-item">
+          <div class="partner-item-img">
+            <img src="img/man.png" alt="" width="120" height="120">
+            <div class="bg-svg">
+              <svg class="partner-item-svg" width="20" height="20">
+                <use href="img/sprite.svg#icon-shape-3"></use>
+              </svg>
+            </div>
+          </div>
+          <h3 class="name-text">Lucas Marsha</h3>
+          <p>I get my inspiration from nature and objects around me. I have a passion to colours,
+            typography and
+            skateboards.</p>
         </li>
-        <li>
-          <h3></h3>
-          <p></p>
+        <li class="partner-item">
+          <div class="partner-item-img">
+            <img src="img/woman.png" alt="" width="120" height="120">
+            <div class="bg-svg">
+              <svg class="partner-item-svg" width="20" height="20">
+                <use href="img/sprite.svg#icon-shape-2"></use>
+              </svg>
+            </div>
+          </div>
+          <h3 class="name-text">Heather Walker</h3>
+          <p>I'm a happy person that loves cats and climbing on mountains.</p>
         </li>
-        <li>
-          <h3></h3>
-          <p></p>
+        <li class="partner-item">
+          <div class="partner-item-img">
+            <img src="img/woman_glasses.png" alt="" width="120" height="120">
+            <div class="bg-svg">
+              <svg class="partner-item-svg" width="20" height="20">
+                <use href="img/sprite.svg#icon-shape-4"></use>
+              </svg>
+            </div>
+          </div>
+          <h3 class="name-text">Bradley Hunter</h3>
+          <p>Based in Chicago. I love playing tennis and loud music.</p>
         </li>
       </ul>
+      <button class="other_button" type="button">See other partners</button>
     </section>
   </main>
   <footer></footer>
 </body>
+
+</html>
