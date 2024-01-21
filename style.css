@@ -144,9 +144,10 @@ label span::after {
   background-size: cover;
   margin-bottom: 63px;
 }
+
 @media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
   .header {
     background-image: url(img/mobile/mobile-header@2x.jpg);
   }
@@ -238,17 +239,34 @@ label span::after {
   text-align: center;
   line-height: normal;
 }
-@media screen and (min-width: 768px){
+
+@media screen and (min-width: 768px) {
   .header {
     background-image: url(img/tablet/tablet-header.jpg);
   }
-  
+
 }
+
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
- (min-width: 768px) and (min-resolution: 192dpi),
- (min-width: 768px) and (min-resolution: 2dppx) {
+(min-width: 768px) and (min-resolution: 192dpi),
+(min-width: 768px) and (min-resolution: 2dppx) {
   .header {
     background-image: url(img/tablet/tablet-header@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    background-image: url(img/desktop/desk-header.jpg);
+  }
+
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+(min-width: 1200px) and (min-resolution: 192dpi),
+(min-width: 1200px) and (min-resolution: 2dppx) {
+  .header {
+    background-image: url(img/desktop/desk-header@2x.jpg);
   }
 }
 
@@ -277,7 +295,7 @@ label span::after {
   /* height: 210px; */
 }
 
-.partner-item > p {
+.partner-item>p {
   color: #666;
   text-align: center;
   font-family: Roboto;
